@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
 
+
     async function getCurrentBitcoinPrice() {
         // Define the API endpoint URL
         const apiUrl = 'https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd&precision=5';
@@ -21,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     }
     (async () => {
-        document.getElementById('livePrice').innerText = "$"+(await getCurrentBitcoinPrice())
+        document.getElementById('livePrice').innerText = "$" + (await getCurrentBitcoinPrice())
     })()
 
 
@@ -30,6 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // document.getElementById("bitcoinPrices").disabled = true
         // document.getElementById("dollarPrices").disabled = false
         // document.getElementById("bothPrices").disabled = false
+
         chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
             chrome.tabs.sendMessage(tabs[0].id, { action: "justBTC" }, function (response) {
                 if (chrome.runtime.lastError) {
@@ -41,6 +43,29 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
+    const bitcoinPrice = document.getElementById('bitcoinPrice');
+    const tooltip = document.getElementById('tooltip');
+    var closeButton = document.getElementById('closeButton');
+    var reportButton = document.getElementById('reportButton');
+    var logoButton = document.getElementById('logoButton');
+
+    logoButton.addEventListener('click', function () {
+        var bitstopURL = 'https://bitstop.co/';
+        chrome.tabs.create({ url: bitstopURL });
+        console.log("LOGO")
+    });
+
+    reportButton.addEventListener('click', function () {
+        var reportFormURL = 'https://forms.gle/fZyhk7fVLRZAZB8A6';
+        chrome.tabs.create({ url: reportFormURL });
+        console.log("REPORT")
+    });
+
+    closeButton.addEventListener('click', function () {
+        window.close();
+        //chrome.runtime.sendMessage({ action: 'closeExtension' });
+        console.log("CLOSE")
+    });
     document.getElementById("dollarPrices").addEventListener("click", function () {
         // document.getElementById("bitcoinPrices").disabled = false
         // document.getElementById("dollarPrices").disabled = true
