@@ -8,3 +8,8 @@
     border: 1px solid #ccc;
     z-index: 1;
 }
+
+body {
+    height: 600px;
+    width:350px;
+}

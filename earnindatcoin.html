@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Display Counter</title>
+    <script src="popup.js"></script> <!-- Include your JavaScript file -->
+</head>
+<body>
+    
+
+    <script>
+        // Access the userAccount variable from popup.js
+        // and update the content of the HTML element
+        const counterElement = document.getElementById("counterDisplay");
+        if (typeof userAccount !== 'undefined') {
+            counterElement.textContent = `Counter Value: ${userAccount}`;
+        } else {
+            counterElement.textContent = "Counter Value: Not available";
+        }
+    </script>
+</body>
+</html>
+
+
