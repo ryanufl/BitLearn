@@ -15,3 +15,9 @@ document.addEventListener("DOMContentLoaded", function () {
         tooltip.style.display = 'none';
     });
 });
+
+const button = document.getElementById('bitcoin');
+
+button.addEventListener('click', function () {
+    button.classList.toggle('inverted');
+});
