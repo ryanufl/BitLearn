@@ -1,7 +1,23 @@
 document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("replaceButton").addEventListener("click", function () {
+        document.getElementById("removeButton").disabled = false
+        document.getElementById("replaceButton").disabled = true
         chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
             chrome.tabs.sendMessage(tabs[0].id, { action: "replace_text" }, function (response) {
+                if (chrome.runtime.lastError) {
+                    console.log(chrome.runtime.lastError.message);
+                } else {
+                    console.log(response);
+                }
+            });
+        });
+    });
+
+    document.getElementById("removeButton").addEventListener("click", function () {
+        document.getElementById("removeButton").disabled = true
+        document.getElementById("replaceButton").disabled = false
+        chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
+            chrome.tabs.sendMessage(tabs[0].id, { action: "remove_text" }, function (response) {
                 if (chrome.runtime.lastError) {
                     console.log(chrome.runtime.lastError.message);
                 } else {

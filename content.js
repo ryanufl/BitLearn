@@ -24,21 +24,42 @@ async function getCurrentBitcoinPrice() {
 // Define the replacement strings
 let searchString = /\$\d+(\.\d{2})?/g;
 let bitPrice
-getCurrentBitcoinPrice().then(price => bitPrice = price)
+let replacementString = ` (\u20BF${bitPrice})`
+getCurrentBitcoinPrice().then((value) => {
+    bitPrice = value
+    replacementString = `${bitPrice}`
+}).then((value) =>{
+    replaceText(document.documentElement)
+})
 console.log(bitPrice)
-let replacementString = ` (\u20BF${bitPrice})`;
+
+
 
 // Function to replace text in a given node
 function replaceText(node) {
     if (node.nodeType === Node.TEXT_NODE) {
-        node.textContent = node.textContent.replace(searchString, function (match) { return match + replacementString });
+        node.textContent = node.textContent.replace(searchString, function (match) { return match + "\n(\u20BF" + (parseFloat(match.slice(1)) / parseFloat(replacementString)).toFixed(5) + ")" });
     } else if (node.nodeType === Node.ELEMENT_NODE) {
         // Recursively traverse child nodes of elements
         for (let i = 0; i < node.childNodes.length; i++) {
             replaceText(node.childNodes[i]);
         }
     }
+
 }
+
+// Function to remove bitcoin value in a given node
+function removeText(node) {
+    if (node.nodeType === Node.TEXT_NODE) {
+        node.textContent = node.textContent.replace(/\(\u20BF\d+(\.\d*)?\)/g, "");
+    } else if (node.nodeType === Node.ELEMENT_NODE) {
+        // Recursively traverse child nodes of elements
+        for (let i = 0; i < node.childNodes.length; i++) {
+            removeText(node.childNodes[i]);
+        }
+    }
+}
+
 
 // Get the root node of the document (usually <html>)
 let rootNode = document.documentElement;
@@ -49,5 +70,10 @@ chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
     if (message.action === "replace_text") {
         // Call the replaceText function when requested
         replaceText(document.documentElement);
+    } else if (message.action === "remove_text") {
+        removeText(document.documentElement)
+    }else if (message.action === "add_bitcoin_prices"){
+        replaceText(document.documentElement)
+        console.log("STARTED")
     }
 });
