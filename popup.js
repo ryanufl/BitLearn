@@ -62,5 +62,10 @@ document.addEventListener("DOMContentLoaded", function () {
         // Hide the tooltip
         tooltip.style.display = 'none';
     });
+});
 
+const button = document.getElementById('bitcoin');
+
+button.addEventListener('click', function () {
+    button.classList.toggle('inverted');
 });
