@@ -14,7 +14,7 @@
               <button type="button" class="focus\:outline-none">
                 <img class="h-16 w-auto" src="IMG_2B5B4865E354-1.jpeg" alt="BitLearn">
               </button> 
-              <div class="flex items-end justify-between border-b py-6 px-4"> price of bitcoin </div>
+              <div class="flex items-end justify-between border-b py-6 px-4" id = "currBitcoin"> price of bitcoin </div>
               <div>
                 <button type="button" class="mr-4" >
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
@@ -40,11 +40,20 @@
             <div class="border-b border-slate-200">
               <div class="flex-wrap text-center justify-center py-2 px-4" id = "tooltip">
                 <p class="text-lg font-medium text-slate-700">About BitLearn!</p>
-                <div class="mt-3 text-sm"> 
-                  educational blurb about bitcoin and blah blah blah blha ahsjhdasdas shadhj ahsj kdahsj dhj. Take the quiz for one dollar worth of bitcoin
+                <div class="mt-3 text-xs"> 
+                  Blockchain is a decentralized and distributed ledger technology that allows for secure and transparent recording of
+                  transactions. It serves as the underlying technology for cryptocurrencies like Bitcoin. Miners play a crucial role in
+                  the blockchain network. They are rewarded for successfully mining blocks. The first commercial transaction with Bitcoin
+                  was on May 22, 2010 by Laszlo Hanyecz, who bought two supreme pizzas from Papa John's for a whopping 10,000 BTC, or $266
+                  million at current prices! This began the age of using Bitcoin as a substitute for cash in transactions.
                 </div>
               </div>
             </div>
+          </div>
+          <div class="flex justify-center mb-4 p-2">
+            <button class="flex items-center justify-center rounded-full bg-red-400 px-3 py-2 font-semibold text-white shadow hover:shadow-md focus\:outline-none">
+              Quiz
+            </button>
           </div>
         </main>
       </div>
@@ -67,7 +76,6 @@
               d="M4 10.781c.148 1.667 1.513 2.85 3.591 3.003V15h1.043v-1.216c2.27-.179 3.678-1.438 3.678-3.3 0-1.59-.947-2.51-2.956-3.028l-.722-.187V3.467c1.122.11 1.879.714 2.07 1.616h1.47c-.166-1.6-1.54-2.748-3.54-2.875V1H7.591v1.233c-1.939.23-3.27 1.472-3.27 3.156 0 1.454.966 2.483 2.661 2.917l.61.162v4.031c-1.149-.17-1.94-.8-2.131-1.718H4zm3.391-3.836c-1.043-.263-1.6-.825-1.6-1.616 0-.944.704-1.641 1.8-1.828v3.495l-.2-.05zm1.591 1.872c1.287.323 1.852.859 1.852 1.769 0 1.097-.826 1.828-2.2 1.939V8.73l.348.086z" />
           </svg>
         </button>
-
       </footer>
     </div>
   </section>
