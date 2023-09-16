@@ -3,8 +3,11 @@
     "name": "BitLearn",
     "version": "1.0",
     "permissions": [
-      "activeTab"
-    ],
+        "activeTab"
+      ],
+      "host_permissions": [
+        "https://api.coingecko.com/"
+      ],
     "action": {
       "default_popup": "popup.html"
     },
