@@ -1,24 +1,56 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Dollar Replacement</title>
-  <script src="popup.js"></script>
-  <link rel="stylesheet" href="popup.css">
+  <button id="quiz" style="width: 100px; height: 100px;">Take Quiz for shmoneyy</button>
+
+    <script src="popup.js"></script>
+    <link rel="stylesheet" type="text/css" href="popup.css">
 </head>
 <body>
-    <div id="bitcoinPrice">
-        TODO: Make me a little information button and put me in a corner
-        <div id="tooltip">Hover for Bitcoin Info</div>
+  <section id="popup", class="bg-white">
+    <div class="h-popup flex flex-col justify-between">
+      <div class="render-controls h-full">
+        <header class="sticky top-0 z-10 w-full bg-white">
+        <div class="w-full">
+          <div class ="flex items-unset justify-between border-b py-4 px-4">
+              <img id="logo" class="focus\:outline-none h-16 w-auto" src="IMG_2B5B4865E354-1.jpeg">
+              <div class="flex items-end justify-between border-b py-6 px-4"> price of bitcoin </div>
+              <div>
+                <button type="button" class="mr-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    stroke-width="1.5" stroke="currentColor" class="h-4 w-4 text-stone-500">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M3 3v1.5M3 21v-6m0 0l2.77-.693a9 9 0 016.208.682l.108.054a9 9 0 006.086.71l3.114-.732a48.524 48.524 0 01-.005-10.499l-3.11.732a9 9 0 01-6.085-.711l-.108-.054a9 9 0 00-6.208-.682L3 4.5M3 15V4.5">
+                    </path>
+                  </svg>
+                </button>
+                <button type="button">
+                  <svg class="h-4 w-4 text-stone-500" fill="currentColor" viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                      d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                      clip-rule="evenodd">
+                    </path>
+                  </svg>
+                </button>
+          </div>
+        </div>
+        </header>
+        <main class>
+          <div>
+            <div class="border-b border-slate-200">
+              <div class="flex-wrap text-center justify-center py-2 px-4" id = "tooltip">
+                <p class="text-lg font-medium text-slate-700">About BitLearn!</p>
+                <div class="mt-3 text-sm"> 
+                  educational blurb about bitcoin and blah blah blah blha ahsjhdasdas shadhj ahsj kdahsj dhj. Take the quiz for one dollar worth of bitcoin
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
     </div>
-    
-  <h1>Dollar Replacement</h1>
-  <button id="replaceButton" style="width: 100px; height: 100px;" disabled>Click to add bitcoin prices!</button>
-  <button id="removeButton" style="width: 100px; height: 100px;">Click to remove bitcoin prices!</button>
-  <button id="quiz" style="width: 100px; height: 100px;">Take Quiz for shmoneyy</button>
- 
-
-
-   
+  </section>
 
 </body>
 </html>
