@@ -1,2 +1,2 @@
-let replaced = document.body.innerHTML.replace(/\$/g, '$DOLLAR$<span title="This page was edited" class="dollar">');
+let replaced = document.body.innerHTML.replaceAll("replaceAll()", 'FUNCTION');
 document.body.innerHTML = replaced;
