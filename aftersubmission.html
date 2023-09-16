@@ -1,0 +1,42 @@
+<div id="result"></div>
+<div id="prize-button" style="display: none;">
+    <button onclick="claimPrize()">Claim your prize</button>
+</div>
+<script>
+    function calculateScore() {
+        const answers = {
+            q1: "b",
+            q2: "c",
+            q3: "a"
+        };
+
+        let score = 0;
+
+        for (const question in answers) {
+            const selectedOption = document.querySelector(`input[name=${question}]:checked`);
+            if (selectedOption) {
+                if (selectedOption.value === answers[question]) {
+                    score++;
+                }
+            }
+        }
+
+        const resultElement = document.getElementById("result");
+        resultElement.innerHTML = `Your Score: ${score} out of 3`;
+
+        // Check if the score is 3 and show the "Claim your prize" button
+        if (score === 3) {
+            const prizeButton = document.getElementById("prize-button");
+            prizeButton.style.display = "block";
+        }
+    }
+
+    function claimPrize() {
+        // Open a new popup window named 'BitcoinDollarAdd' and load 'AddADollar.html'
+        var popupWindow = window.open('AddADollar.html', 'BitcoinDollarAdd', 'width=500,height=400');
+        
+        // Focus on the new popup window (optional)
+        if (popupWindow) {
+            popupWindow.focus();
+        }
+    }

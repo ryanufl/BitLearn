@@ -1,3 +1,22 @@
+<<<<<<< HEAD
+=======
+
+#tooltip {
+    display: none;
+    position: absolute;
+    background-color: #f2f2f2;
+    color: #333;
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    z-index: 1;
+}
+
+body {
+    height: 600px;
+    width:350px;
+}
+>>>>>>> 15ba14f83e0c0870dba71d145124b96e9199e9b8
 @font-face {
     font-family: Palanquin;
     font-style: normal;
@@ -3027,6 +3046,7 @@ body {
 
 .focus\:before\:content-\[\'Copied\'\]:focus:before{--tw-content:"Copied";content:var(--tw-content)}.active\:bg-primary-darkest:active{--tw-bg-opacity:1;background-color:rgb(10 136 164/var(--tw-bg-opacity))}.disabled\:bg-gray-50:disabled{--tw-bg-opacity:1;background-color:rgb(249 250 251/var(--tw-bg-opacity))}.disabled\:opacity-90:disabled{opacity:.9}.group:hover .group-hover\:pointer-events-auto{pointer-events:auto}.group:hover .group-hover\:-translate-x-6{--tw-translate-x:-24px;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.group:hover .group-hover\:bg-primary-base{--tw-bg-opacity:1;background-color:rgb(62 192 222/var(--tw-bg-opacity))}.group:hover .group-hover\:bg-slate-400{--tw-bg-opacity:1;background-color:rgb(148 163 184/var(--tw-bg-opacity))}.group:hover .group-hover\:opacity-100{opacity:1}.group:hover .group-hover\:opacity-75{opacity:.75}.group:hover .group-hover\:hover\:opacity-100:hover{opacity:1}@media (min-width:1024px){.lg\:inline-flex{display:inline-flex}}.carousel .control-arrow,.carousel.carousel-slider .control-arrow{background:none;border:0;cursor:pointer;filter:alpha(opacity=40);font-size:32px;opacity:.4;position:absolute;top:20px;transition:all .25s ease-in;z-index:2}.carousel .control-arrow:focus,.carousel .control-arrow:hover{filter:alpha(opacity=100);opacity:1}.carousel .control-arrow:before,.carousel.carousel-slider .control-arrow:before{border-bottom:8px solid transparent;border-top:8px solid transparent;content:"";display:inline-block;margin:0 5px}.carousel .control-disabled.control-arrow{cursor:inherit;display:none;filter:alpha(opacity=0);opacity:0}.carousel .control-prev.control-arrow{left:0}.carousel .control-prev.control-arrow:before{border-right:8px solid #fff}.carousel .control-next.control-arrow{right:0}.carousel .control-next.control-arrow:before{border-left:8px solid #fff}.carousel-root{outline:none}.carousel{position:relative;width:100%}.carousel *{box-sizing:border-box}.carousel img{display:inline-block;pointer-events:none;width:100%}.carousel .carousel{position:relative}.carousel .control-arrow{background:none;border:0;font-size:18px;margin-top:-13px;outline:0;top:50%}.carousel .thumbs-wrapper{margin:20px;overflow:hidden}.carousel .thumbs{list-style:none;position:relative;transform:translateZ(0);transition:all .15s ease-in;white-space:nowrap}.carousel .thumb{border:3px solid #fff;display:inline-block;margin-right:6px;overflow:hidden;padding:2px;transition:border .15s ease-in;white-space:nowrap}.carousel .thumb:focus{border:3px solid #ccc;outline:none}.carousel .thumb.selected,.carousel .thumb:hover{border:3px solid #333}.carousel .thumb img{vertical-align:top}.carousel.carousel-slider{margin:0;overflow:hidden;position:relative}.carousel.carousel-slider .control-arrow{bottom:0;color:#fff;font-size:26px;margin-top:0;padding:5px;top:0}.carousel.carousel-slider .control-arrow:hover{background:rgba(0,0,0,.2)}.carousel .slider-wrapper{margin:auto;overflow:hidden;transition:height .15s ease-in;width:100%}.carousel .slider-wrapper.axis-horizontal .slider{-ms-box-orient:horizontal;display:-moz-flex;display:flex}.carousel .slider-wrapper.axis-horizontal .slider .slide{flex-direction:column;flex-flow:column}.carousel .slider-wrapper.axis-vertical{-ms-box-orient:horizontal;display:-moz-flex;display:flex}.carousel .slider-wrapper.axis-vertical .slider{flex-direction:column}.carousel .slider{list-style:none;margin:0;padding:0;position:relative;width:100%}.carousel .slider.animated{transition:all .35s ease-in-out}.carousel .slide{margin:0;min-width:100%;position:relative;text-align:center}.carousel .slide img{border:0;vertical-align:top;width:100%}.carousel .slide iframe{border:0;display:inline-block;margin:0 40px 40px;width:calc(100% - 80px)}.carousel .slide .legend{background:#000;border-radius:10px;bottom:40px;color:#fff;font-size:12px;left:50%;margin-left:-45%;opacity:.25;padding:10px;position:absolute;text-align:center;transition:all .5s ease-in-out;transition:opacity .35s ease-in-out;width:90%}.carousel .control-dots{bottom:0;margin:10px 0;padding:0;position:absolute;text-align:center;width:100%;z-index:1}@media(min-width:960px){.carousel .control-dots{bottom:0}}.carousel .control-dots .dot{background:#fff;border-radius:50%;box-shadow:1px 1px 2px rgba(0,0,0,.9);cursor:pointer;display:inline-block;filter:alpha(opacity=30);height:8px;margin:0 8px;opacity:.3;transition:opacity .25s ease-in;width:8px}.carousel .control-dots .dot.selected,.carousel .control-dots .dot:hover{filter:alpha(opacity=100);opacity:1}.carousel .carousel-status{color:#fff;font-size:10px;padding:5px;position:absolute;right:0;text-shadow:1px 1px 1px rgba(0,0,0,.9);top:0}.carousel:hover .slide .legend{opacity:1}
 
+<<<<<<< HEAD
 .button-active {
     background-color: #e5e7eb; /* Change to your desired background color */
     color: #4b5563; /* Change to your desired icon color */
@@ -3049,3 +3069,5 @@ body {
     color: #d81305ee; /* Bitcoin orange color */
   }
   
+=======
+>>>>>>> 15ba14f83e0c0870dba71d145124b96e9199e9b8

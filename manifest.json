@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
     "manifest_version": 3,
     "name": "BitLearn",
     "version": "1.0",
@@ -34,3 +35,26 @@
       }
     ]
   }
+=======
+  "manifest_version": 3,
+  "name": "BitLearn",
+  "version": "1.0",
+  "permissions": ["activeTab", "storage"],
+  "host_permissions": ["https://api.coingecko.com/"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
+
+
+  
+>>>>>>> 15ba14f83e0c0870dba71d145124b96e9199e9b8
