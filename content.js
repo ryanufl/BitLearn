@@ -25,6 +25,7 @@ async function getCurrentBitcoinPrice() {
 let searchString = /\$\d+(\.\d{2})?/g;
 let bitPrice
 let replacementString = ` (\u20BF${bitPrice})`
+
 let priceState = 2   //0 = both prices shown, 1 = just BTC shown, 2 = just money shown
 getCurrentBitcoinPrice().then((value) => {
     bitPrice = value

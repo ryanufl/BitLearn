@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <style>
+        .quiz-container {
+            width: 60%;
+            margin: 0 auto;
+            text-align: left;
+        }
+        .question {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .options label {
+            display: block;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="quiz-container">
+        <h1>Quiz</h1>
+        <div class="question" id="question1">1. The first commercial bitcoin transaction was for a pizza worth _____ BTC?</div>
+        <div class="options">
+            <label>
+                <input type="radio" name="q1" value="a"> a) 5,000
+            </label>
+            <label>
+                <input type="radio" name="q1" value="b"> b) 10,000
+            </label>
+            <label>
+                <input type="radio" name="q1" value="c"> c) 15,000
+            </label>
+            <label>
+                <input type="radio" name="q1" value="d"> d) 20,000
+            </label>
+        </div>
+
+        <div class="question" id="question2">2. What is a blockchain? </div>
+        <div class="options">
+            <label>
+                <input type="radio" name="q2" value="a"> a) It is the easiest way to sell bitcoin
+            </label>
+            <label>
+                <input type="radio" name="q2" value="b"> b) A secure way of keeping track of your bitcoin
+            </label>
+            <label>
+                <input type="radio" name="q2" value="c"> c) A distributed ledger that records all transactions of a cryptocurrency
+            </label>
+            <label>
+                <input type="radio" name="q2" value="d"> d) Like the turnover chain but for blocked punts
+            </label>
+        </div>
+
+        <div class="question" id="question3">3. Miners are rewarded for successfully mining...</div>
+        <div class="options">
+            <label>
+                <input type="radio" name="q3" value="a"> a) Blocks
+            </label>
+            <label>
+                <input type="radio" name="q3" value="b"> b) Coins
+            </label>
+            <label>
+                <input type="radio" name="q3" value="c"> c) Bits 
+            </label>
+            <label>
+                <input type="radio" name="q3" value="d"> d) BitGold
+            </label>
+        </div>
+    </div>
+    <script src="popup.js"></script>
+    <button id="submitbutton" style="width: 100px; height: 100px;">Submit</button>
+    </script>
+</body>
+</html>
+
