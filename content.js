@@ -47,9 +47,9 @@ function bitcoinAndMoney(node, moneyState) {
                 bitcoinAndMoney(node.childNodes[i], moneyState);
             }
         }
-    }else if (moneyState === 1){ //if just BTC shown, convert to money and add
+    } else if (moneyState === 1) { //if just BTC shown, convert to money and add
         if (node.nodeType === Node.TEXT_NODE) {
-            node.textContent = node.textContent.replace(/\(\u20BF\d+(\.\d*)?\)/g, function (match) { return "$" + (parseFloat(match.substring(2, match.length - 1))*bitPrice).toFixed(2)+ " " + match });
+            node.textContent = node.textContent.replace(/\(\u20BF\d+(\.\d*)?\)/g, function (match) { return "$" + (parseFloat(match.substring(2, match.length - 1)) * bitPrice).toFixed(2) + " " + match });
         } else if (node.nodeType === Node.ELEMENT_NODE) {
             // Recursively traverse child nodes of elements
             for (let i = 0; i < node.childNodes.length; i++) {
@@ -63,7 +63,7 @@ function bitcoinAndMoney(node, moneyState) {
 // Function to remove bitcoin value in a given node
 function justMoney(node, moneyState) {
     console.log("JUST MOENY    ", moneyState)
-    if(moneyState === 0){ //if both are there remove just BTC
+    if (moneyState === 0) { //if both are there remove just BTC
         if (node.nodeType === Node.TEXT_NODE) {
             node.textContent = node.textContent.replace(/\(\u20BF\d+(\.\d*)?\)/g, "");
         } else if (node.nodeType === Node.ELEMENT_NODE) {
@@ -72,9 +72,9 @@ function justMoney(node, moneyState) {
                 justMoney(node.childNodes[i], moneyState);
             }
         }
-    }else if (moneyState === 1){//convert from BTC to money
+    } else if (moneyState === 1) {//convert from BTC to money
         if (node.nodeType === Node.TEXT_NODE) {
-            node.textContent = node.textContent.replace(/\(\u20BF\d+(\.\d*)?\)/g, function (match) { return "$" + (parseFloat(match.substring(2, match.length - 1))*bitPrice).toFixed(2)});
+            node.textContent = node.textContent.replace(/\(\u20BF\d+(\.\d*)?\)/g, function (match) { return "$" + (parseFloat(match.substring(2, match.length - 1)) * bitPrice).toFixed(2) });
         } else if (node.nodeType === Node.ELEMENT_NODE) {
             // Recursively traverse child nodes of elements
             for (let i = 0; i < node.childNodes.length; i++) {
@@ -87,7 +87,7 @@ function justMoney(node, moneyState) {
 
 function justBitcoin(node, moneyState) {
     console.log("JUST BITCOIN    ", moneyState)
-    if(moneyState === 0){ //if both are there remove just money
+    if (moneyState === 0) { //if both are there remove just money
         if (node.nodeType === Node.TEXT_NODE) {
             node.textContent = node.textContent.replace(searchString, "");
         } else if (node.nodeType === Node.ELEMENT_NODE) {
@@ -96,7 +96,7 @@ function justBitcoin(node, moneyState) {
                 justBitcoin(node.childNodes[i], moneyState);
             }
         }
-    }else if (moneyState === 2){//convert from money to BTC
+    } else if (moneyState === 2) {//convert from money to BTC
         if (node.nodeType === Node.TEXT_NODE) {
             node.textContent = node.textContent.replace(searchString, function (match) { return "\n(\u20BF" + (parseFloat(match.slice(1)) / parseFloat(replacementString)).toFixed(7) + ")" });
         } else if (node.nodeType === Node.ELEMENT_NODE) {
