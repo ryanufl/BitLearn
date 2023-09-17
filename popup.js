@@ -1,7 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
+
     var closeButton = document.getElementById('closeButton');
     var reportButton = document.getElementById('reportButton');
     var logoButton = document.getElementById('logoButton');
+
 
 
     async function getCurrentBitcoinPrice() {
@@ -28,6 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById('livePrice').innerText = "$" + (await getCurrentBitcoinPrice())
     })()
 
+
     logoButton.addEventListener('click', function () {
         var bitstopURL = 'https://bitstop.co/';
         chrome.tabs.create({ url: bitstopURL });
@@ -45,6 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
         //chrome.runtime.sendMessage({ action: 'closeExtension' });
         console.log("CLOSE")
     });
+
 
     document.getElementById("bitcoinPrices").addEventListener("click", function () {
         console.log("ADDED EVENT LISTENER")
@@ -118,3 +122,4 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 });
+
